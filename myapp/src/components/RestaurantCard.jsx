@@ -17,6 +17,7 @@ import { CDN_URL } from "../utils/constant";
     return(
       <div className='res-cards'>
       <img  className="card-image" alt ="food image" src= {CDN_URL}/>
+      
       <h3>{name}</h3>
       <h4> {cuisine.join(",")} </h4>
       <h4> {rating} stars </h4>
