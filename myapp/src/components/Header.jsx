@@ -1,30 +1,31 @@
 
 import {LOGO_URL} from "../utils/constant"
+import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
+import './header.css'
 
-const Header = ()=> {
-    return(
-      <div className="Header">
-  
-       <div className="logo-container">
-      <img className="logo" alt = "app logo image" src={LOGO_URL}/>
-       </div>
-         <div className='Heading'>
-         <h1> Food App</h1>
-  
-         </div>
-    <div className="Nav-items">
-      <ul>
-        <li> Home </li>
-        <li> About us </li>
-         <li> Contact us</li>
-         <li> Cart</li>
-         <li>Signup</li>
-        
-      </ul>
-    </div>
-    </div>
-    );
-   }
+const Header = () => {
+  const [loginBtn, setLoginBtn] = useState('Login');
 
-   export default Header;
-  
+  return (
+    <div className="header">
+      <div className="header__logo">
+       <img src="/Hot Red Illustrative Burger Food Logo.jpg" alt ="Restaurant logo" className="logo"/>
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li><Link to="/" className="home">Home</Link></li>
+          <li><Link to="/about" className="about">About Us</Link></li>
+          <li><Link to="/contact-us" className="contact">Contact Us</Link></li>
+          <li className="cart">Cart</li>
+          <button className="login-btn" onClick={() => {
+            setLoginBtn(loginBtn === 'Login' ? 'Logout' : 'Login');
+          }}>{loginBtn}</button>
+          <button className="signup-btn">Signup</button>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default Header;

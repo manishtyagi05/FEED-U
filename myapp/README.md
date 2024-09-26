@@ -19,3 +19,12 @@ Currently, two official plugins are available:
 # these two hooks are used most of the time
 # it allow us to keep data layer and UI layer in sync
 # whenever data gets updated by useState() and state variable updates  then React re-rendered all component
+
+
+#important
+#    //very imp -- whenever the state variable change or updated react triggers re render component  cycle immidietly called as reconciliation using Diff algorithm by comparing old virtual DOM and New virtual DOM  and then updates only changed part in Actual DOM and it is lightning fast
+
+
+# 2 types of Routing in Web apps
+ - Client side Routing 
+- Server  side Routing 

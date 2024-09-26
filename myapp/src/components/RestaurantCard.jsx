@@ -1,5 +1,7 @@
 
-import { CDN_URL } from "../utils/constant";
+import { CDN_URL,CLOUDANARY_IMAGE } from "../utils/constant";
+import { useState } from "react";
+import renderStars from "../utils/stars";
    
      const RestaurantCard =  ( props )=> {
         const {resData} = props;
@@ -7,23 +9,40 @@ import { CDN_URL } from "../utils/constant";
         const{
           id,
           name,
-          cuisine,
-          rating,
-          min_time,
-          price_for_two,
+          cloudinaryImageId,
+          avgRating,
+          costForTwo,
+          isOpen,
+          cuisines,
           locality,
-        } = resData
+          areaName,
+        } = resData;
+
+
         
     return(
       <div className='res-cards'>
-      <img  className="card-image" alt ="food image" src= {CDN_URL}/>
+
+        {cloudinaryImageId ? (
+        <img
+          className="card-image"
+          alt="food image"
+          src={`${CLOUDANARY_IMAGE}${cloudinaryImageId}`}
+        />
+      ) : (
+        <p>Image not available</p>
+      )}
       
       <h3>{name}</h3>
-      <h4> {cuisine.join(",")} </h4>
-      <h4> {rating} stars </h4>
-       <h4>{min_time} </h4>
-      <h4> {price_for_two}</h4>
-      <h4> {locality} </h4>
+
+      <h4 className='cuisine-list'> {cuisines?.length > 0   ? cuisines.join(", ")  : "Cuisines not available"} </h4>  
+      
+    
+      <h4>  {renderStars(avgRating)} {avgRating} stars </h4>
+
+      <h4>{costForTwo}</h4>
+      
+      <h6 >{isOpen? "Opens": "Closed"}</h6>
       </div>
   
     );

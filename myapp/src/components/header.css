@@ -1,0 +1,154 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .nav-items ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-items li {
+    margin: 0 25px;
+  }
+  
+  .nav-items li a {
+    text-decoration: none;
+    color: #0b0000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  /* Home */
+  .home {
+    width: 58px;
+    height: 25px;
+    color: #0b0000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+
+  }
+  
+  /* About */
+  .about {
+    width: 79.22px;
+    height: 17px;
+    color: #0b0000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+  
+  }
+  
+  /* Contact */
+  .contact {
+    width: 83px;
+    height: 30px;
+    color: #0b0000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+   
+  }
+  
+
+  .cart {
+    width: 84px;
+    height: 15px;
+    color: #0b0000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+
+  }
+  
+  /* Login Button */
+  .login-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 8px;
+    margin-top: -5px;
+    width: 90px;
+    height: 40px;
+    
+    background: #3450E7;
+    color: #fff;
+    border-radius: 6px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    cursor: pointer;
+  }
+
+  .signup-btn{
+    box-sizing: border-box;
+
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 24px;
+gap: 8px;
+margin: 10px;
+margin-top: -5px;
+width: 90px;
+height: 40px;
+
+
+background: #FFFFFF;
+border: 1px solid #101113;
+border-radius: 6px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+  }
+  
+.header {
+
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    padding: 15px 20px; 
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 800; 
+    display: flex;
+    justify-content: space-between; 
+    height: 65px;
+  }
+  
+  /* Logo styling */
+ 
+  .logo {
+    width: 200px; 
+    background-color: ffffff;
+   
+
+    height: 100px; 
+  }
+
+  
+
+
