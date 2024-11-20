@@ -3,36 +3,22 @@ import Shimmer from './Shimmer.jsx';
 import OfferCard from './OfferCard.jsx'; 
  import MenuItems from "./MenuItems.jsx";
  import { useParams } from "react-router-dom";
+ import useRestaurantMenu from "../utils/useRestaurantMenu.jsx";
 
 
+  
 const RestaurantMenu = () => {
-    const [ResInfo, setResInfo] = useState(null);
+   
 
     const{resId} = useParams();
-
-    useEffect(() => {
-        fetchMenu();
-    }, []);
-
     
-
-    const fetchMenu = async () => {
-        try {
-            const data = await fetch(  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId="+resId+"&catalog_qa=undefined&submitAction=ENTER"
-
-            )
-            const json = await data.json();
-            console.log(json);
-            setResInfo(json.data);
-        } catch (error) {
-            console.error("Error fetching menu:", error);
-        }
-    };
+    const ResInfo = useRestaurantMenu(resId);  // custom hooks
 
     const offers = ResInfo?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers;
     const menuItems = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
     console.log(menuItems);
-  
+   
+    
     const {  
         name,
         avgRatingString,
@@ -42,7 +28,7 @@ const RestaurantMenu = () => {
         locality,
         slaString,
         sla,
-        feeDetails,
+        isOpen,
     } = ResInfo?.cards?.[2]?.card?.card?.info || {};
 
     return ResInfo === null ? (
@@ -56,7 +42,12 @@ const RestaurantMenu = () => {
                 <h3 style={{color:'red'}}>{cuisines?.join(", ")}</h3>
                 <h3>Outlet - {locality}</h3>
                 <h3>{slaString}</h3>
-                <h4>{sla?.lastMileTravelString} | {feeDetails?.fees?.fee / 100}Rs. Delivery fee will apply</h4>
+                <h4>{sla?.lastMileTravelString} |   Delivery fee will apply</h4>
+                <h3 style={{ color: isOpen ? 'green' : 'red' }}>
+                {isOpen ? "Open" : "Closed"}
+                  </h3>
+               
+
             </div>
 
               <h2  style={{ fontSize: '24px', 

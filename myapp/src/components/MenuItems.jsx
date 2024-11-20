@@ -34,6 +34,12 @@ const MenuItems = ({menuItem})=>{
                 src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/" + menuItem?.card?.info?.imageId} 
                 alt={menuItem?.card?.info?.name} 
             />
+             <button 
+        className="menuItem-addButton"
+    >
+        ADD
+    </button>
+            
         </div>
     );
 

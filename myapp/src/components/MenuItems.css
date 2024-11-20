@@ -9,7 +9,9 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    width: 600px;
+    width: 60%;
+    position: relative;
+    overflow: hidden;
 }
 
 .menuItem-details {
@@ -61,3 +63,21 @@
     color: #888;
     font-size: 14px;
 }
+
+
+.menuItem-addButton {
+    position: absolute; /* Places the button within the image container */
+    bottom: 5px; /* Positions above the bottom edge */
+    left: 91%; /* Centers horizontally */
+    transform: translateX(-50%); /* Centers the button properly */
+    background-color: white;
+    color: #28cd4e;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 12%;
+    z-index: 1; /* Ensures the button is above the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }

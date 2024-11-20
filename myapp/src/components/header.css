@@ -82,7 +82,7 @@
     width: 90px;
     height: 40px;
     
-    background: #3450E7;
+    background: #ff5200;
     color: #fff;
     border-radius: 6px;
     
@@ -127,7 +127,7 @@ flex-grow: 0;
     align-items: center;
     padding: 15px 20px; 
     background-color: #ffffff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
     border-radius: 0 0 10px 10px; 
     position: fixed; 
     top: 0; 
