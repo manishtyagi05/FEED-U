@@ -25,8 +25,8 @@ const ContactUs = () => {
       </form>
       <div className="contact-info">
         <p>Or reach us at:</p>
-        <p><strong>Email:</strong> support@restaurantapp.com</p>
-        <p><strong>Phone:</strong> +1 234 567 890</p>
+        <p><strong>Email:</strong> support@FEED-U.com</p>
+        <p><strong>Phone:</strong> +1 12345678</p>
       </div>
     </div>
   );

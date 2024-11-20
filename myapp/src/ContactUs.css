@@ -64,4 +64,20 @@
   .contact-info strong {
     color: #333;
   }
-  
+  /* App.css or relevant component's CSS */
+
+/* Mobile-first layout */
+.container {
+  flex-direction: column;
+}
+
+/* For screens 600px and above */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+

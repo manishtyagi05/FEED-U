@@ -4,6 +4,7 @@
     align-items: center;
     padding: 10px;
     background-color: #f8f9fa;
+    
   }
   
   .nav-items ul {
@@ -149,6 +150,10 @@ flex-grow: 0;
     height: 100px; 
   }
 
-  
+  /* App.css or relevant component's CSS */
+
+
+
+
 
 
